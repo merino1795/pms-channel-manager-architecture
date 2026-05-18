@@ -81,8 +81,9 @@ model RentalRecord {
   sesReported     Boolean     @default(false)
   reservation     Reservation @relation(fields: [reservationId], references: [id])
 }
-
+```
 🏗️ Diagrama de Flujo (Integración Continua)
+```
 graph TD
     A[App Flutter] -->|JWT Auth / REST API| B(Node.js / Express Backend)
     C[React Admin Web] -->|JWT Auth / REST API| B
